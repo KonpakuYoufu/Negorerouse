@@ -1,0 +1,1478 @@
+{
+  "mods/flammpfeil/slashblade/SlashBlade": {
+    "name": "mods/flammpfeil/slashblade/SlashBlade",
+    "interfaces": [
+      "net/minecraftforge/fml/common/IFuelHandler"
+    ],
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "mods/flammpfeil/slashblade/SlashBlade",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "guiFactory": {
+            "value": "mods.flammpfeil.slashblade.gui.config.ConfigGuiFactory"
+          },
+          "modid": {
+            "value": "flammpfeil.slashblade"
+          },
+          "name": {
+            "value": "SlashBlade"
+          },
+          "version": {
+            "value": "@VERSION@"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "modsLoaded(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "instanced(Lnet/minecraftforge/fml/common/event/FMLConstructionEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/AerialRave": {
+    "name": "mods/flammpfeil/slashblade/ability/AerialRave",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingUpdate(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/AvoidAction": {
+    "name": "mods/flammpfeil/slashblade/ability/AvoidAction",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingJump(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingJumpEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/ChargeFloating": {
+    "name": "mods/flammpfeil/slashblade/ability/ChargeFloating",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdate(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/DamageLimitter": {
+    "name": "mods/flammpfeil/slashblade/ability/DamageLimitter",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingHurtEvent(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/EnemyStep": {
+    "name": "mods/flammpfeil/slashblade/ability/EnemyStep",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingUpdate(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingJump(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingJumpEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/FireResistance": {
+    "name": "mods/flammpfeil/slashblade/ability/FireResistance",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdate(Lnet/minecraftforge/event/entity/living/LivingEntityUseItemEvent$Tick;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/IllegalActionEnabler": {
+    "name": "mods/flammpfeil/slashblade/ability/IllegalActionEnabler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onGetCollisionBoxes(Lnet/minecraftforge/event/world/GetCollisionBoxesEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/JustGuard": {
+    "name": "mods/flammpfeil/slashblade/ability/JustGuard",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "LivingHurtEvent(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "LivingUpdateEvent(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/ProjectileBarrier": {
+    "name": "mods/flammpfeil/slashblade/ability/ProjectileBarrier",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdate(Lnet/minecraftforge/event/entity/living/LivingEntityUseItemEvent$Tick;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/StunManager": {
+    "name": "mods/flammpfeil/slashblade/ability/StunManager",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onEntityJoinWorldEvent(Lnet/minecraftforge/event/entity/EntityJoinWorldEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/HIGHEST"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onEntityLivingUpdate(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onEntityCanUpdate(Lnet/minecraftforge/event/entity/EntityEvent$CanUpdate;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/StylishRankManager": {
+    "name": "mods/flammpfeil/slashblade/ability/StylishRankManager",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "LivingUpdateEvent(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "LivingHurtEvent(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/LOWEST"
+          }
+        }
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/Taunt": {
+    "name": "mods/flammpfeil/slashblade/ability/Taunt",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingExperienceDrop(Lnet/minecraftforge/event/entity/living/LivingExperienceDropEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRenderLivingPre(Lnet/minecraftforge/client/event/RenderLivingEvent$Pre;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/TeleportCanceller": {
+    "name": "mods/flammpfeil/slashblade/ability/TeleportCanceller",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onEnderTeleportEvent(Lnet/minecraftforge/event/entity/living/EnderTeleportEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/UntouchableTime": {
+    "name": "mods/flammpfeil/slashblade/ability/UntouchableTime",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingHurt(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/HIGHEST"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingAttackEvent(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "LivingUpdateEvent(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/WaterBreathing": {
+    "name": "mods/flammpfeil/slashblade/ability/WaterBreathing",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdate(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/ability/client/StylishRankRenderer": {
+    "name": "mods/flammpfeil/slashblade/ability/client/StylishRankRenderer",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "renderTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/capability/BladeCapabilityProvider": {
+    "name": "mods/flammpfeil/slashblade/capability/BladeCapabilityProvider",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/ICapabilityProvider",
+      "net/minecraftforge/common/util/INBTSerializable"
+    ],
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "ENERGY",
+        "value": {
+          "type": "CLASS",
+          "value": "Lnet/minecraftforge/energy/IEnergyStorage;"
+        }
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/capability/MobEffect/CapabilityMobEffectHandler": {
+    "name": "mods/flammpfeil/slashblade/capability/MobEffect/CapabilityMobEffectHandler",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "MOB_EFFECT",
+        "value": {
+          "type": "CLASS",
+          "value": "Lmods/flammpfeil/slashblade/capability/MobEffect/IMobEffectHandler;"
+        }
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/capability/MobEffect/CapabilityMobEffectHandler$DefaultMobEffectHandlerStorage": {
+    "name": "mods/flammpfeil/slashblade/capability/MobEffect/CapabilityMobEffectHandler$DefaultMobEffectHandlerStorage",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/Capability$IStorage"
+    ]
+  },
+  "mods/flammpfeil/slashblade/capability/MobEffect/CapabilityMobEffectRegister": {
+    "name": "mods/flammpfeil/slashblade/capability/MobEffect/CapabilityMobEffectRegister",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "AttachCapabilitiesEvent_Entity(Lnet/minecraftforge/event/AttachCapabilitiesEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/capability/MobEffect/MobEffect": {
+    "name": "mods/flammpfeil/slashblade/capability/MobEffect/MobEffect",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/capability/MobEffect/IMobEffectHandler"
+    ]
+  },
+  "mods/flammpfeil/slashblade/capability/MobEffect/MobEffectCapabilityProvider": {
+    "name": "mods/flammpfeil/slashblade/capability/MobEffect/MobEffectCapabilityProvider",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/ICapabilityProvider",
+      "net/minecraftforge/common/util/INBTSerializable"
+    ],
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "MOB_EFFECT",
+        "value": {
+          "type": "CLASS",
+          "value": "Lmods/flammpfeil/slashblade/capability/MobEffect/IMobEffectHandler;"
+        }
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/client/model/BladeModel": {
+    "name": "mods/flammpfeil/slashblade/client/model/BladeModel",
+    "interfaces": [
+      "net/minecraft/client/renderer/block/model/IBakedModel"
+    ]
+  },
+  "mods/flammpfeil/slashblade/client/model/BladeModelManager": {
+    "name": "mods/flammpfeil/slashblade/client/model/BladeModelManager",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "reload(Lnet/minecraftforge/client/event/TextureStitchEvent$Pre;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/client/renderer/entity/LockonCircleRender": {
+    "name": "mods/flammpfeil/slashblade/client/renderer/entity/LockonCircleRender",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRenderLiving(Lnet/minecraftforge/client/event/RenderWorldLastEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/client/renderer/entity/layers/EntityLivingRenderHandler": {
+    "name": "mods/flammpfeil/slashblade/client/renderer/entity/layers/EntityLivingRenderHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "RenderPlayerHandler(Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/client/renderer/entity/layers/LayerSlashBlade": {
+    "name": "mods/flammpfeil/slashblade/client/renderer/entity/layers/LayerSlashBlade",
+    "interfaces": [
+      "net/minecraft/client/renderer/entity/layers/LayerRenderer"
+    ]
+  },
+  "mods/flammpfeil/slashblade/compat/enderio/AnvilRecipe": {
+    "name": "mods/flammpfeil/slashblade/compat/enderio/AnvilRecipe",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onAnvil(Lnet/minecraftforge/event/AnvilUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/config/ConfigManager": {
+    "name": "mods/flammpfeil/slashblade/config/ConfigManager",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onConfigChange(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/ConfigCustomBladeManager": {
+    "name": "mods/flammpfeil/slashblade/core/ConfigCustomBladeManager",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onSlashBladeAchievementCreateEvent(Lmods/flammpfeil/slashblade/util/SlashBladeAchievementCreateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/ConfigEntityListManager": {
+    "name": "mods/flammpfeil/slashblade/core/ConfigEntityListManager",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onWorldTickEvent(Lnet/minecraftforge/fml/common/gameevent/TickEvent$WorldTickEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxy": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxy",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/SidedProxy;",
+        "target": "proxy",
+        "values": {
+          "clientSide": {
+            "value": "mods.flammpfeil.slashblade.core.CoreProxyClient"
+          },
+          "serverSide": {
+            "value": "mods.flammpfeil.slashblade.core.CoreProxy"
+          }
+        }
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$10": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$10",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$11": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$11",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$12": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$12",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$13": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$13",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$14": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$14",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$15": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$15",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$16": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$16",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$17": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$17",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$18": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$18",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$19": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$19",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$2": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$2",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$20": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$20",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$21": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$21",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$22": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$22",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$23": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$23",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$24": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$24",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$25": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$25",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$3": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$3",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$30": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$30",
+    "interfaces": [
+      "net/minecraft/client/renderer/color/IItemColor"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$4": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$4",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$5": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$5",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$6": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$6",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$7": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$7",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$8": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$8",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/core/CoreProxyClient$9": {
+    "name": "mods/flammpfeil/slashblade/core/CoreProxyClient$9",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityCaliburManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityCaliburManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityDrive": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityDrive",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityHelmBrakerManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityHelmBrakerManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityJudgmentCutManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityJudgmentCutManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityJustGuardManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityJustGuardManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityLumberManager$BlockHarvestDropsEventHandler": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityLumberManager$BlockHarvestDropsEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onBlockHarvestDropsEvent(Lnet/minecraftforge/event/world/BlockEvent$HarvestDropsEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/LOWEST"
+          }
+        }
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityMaximumBetManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityMaximumBetManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityRapidSlashManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityRapidSlashManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntitySakuraEndManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntitySakuraEndManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntitySlashDimension": {
+    "name": "mods/flammpfeil/slashblade/entity/EntitySlashDimension",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntitySpearManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntitySpearManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntityStingerManager": {
+    "name": "mods/flammpfeil/slashblade/entity/EntityStingerManager",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntitySummonedSword": {
+    "name": "mods/flammpfeil/slashblade/entity/EntitySummonedSword",
+    "interfaces": [
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/EntitySummonedSwordBase": {
+    "name": "mods/flammpfeil/slashblade/entity/EntitySummonedSwordBase",
+    "interfaces": [
+      "net/minecraft/entity/IProjectile",
+      "net/minecraftforge/fml/common/registry/IThrowableEntity"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/selector/EntitySelectorAttackable": {
+    "name": "mods/flammpfeil/slashblade/entity/selector/EntitySelectorAttackable",
+    "interfaces": [
+      "com/google/common/base/Predicate"
+    ]
+  },
+  "mods/flammpfeil/slashblade/entity/selector/EntitySelectorDestructable": {
+    "name": "mods/flammpfeil/slashblade/entity/selector/EntitySelectorDestructable",
+    "interfaces": [
+      "com/google/common/base/Predicate"
+    ]
+  },
+  "mods/flammpfeil/slashblade/event/AnvilEventHandler": {
+    "name": "mods/flammpfeil/slashblade/event/AnvilEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onAnvil(Lnet/minecraftforge/event/AnvilUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/event/ClickCanceller": {
+    "name": "mods/flammpfeil/slashblade/event/ClickCanceller",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onEntityInteractSpecific(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteractSpecific;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onEntityInteract(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/event/DropEventHandler": {
+    "name": "mods/flammpfeil/slashblade/event/DropEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "LivingDrops(Lnet/minecraftforge/event/entity/living/LivingDropsEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/event/ModelRegister": {
+    "name": "mods/flammpfeil/slashblade/event/ModelRegister",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onModelBake(Lnet/minecraftforge/client/event/ModelBakeEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/event/MoveImputHandler": {
+    "name": "mods/flammpfeil/slashblade/event/MoveImputHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerPostTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/event/PlayerDropsEventHandler": {
+    "name": "mods/flammpfeil/slashblade/event/PlayerDropsEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerDropsEvent(Lnet/minecraftforge/event/entity/living/LivingDropsEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/event/ScheduleEntitySpawner": {
+    "name": "mods/flammpfeil/slashblade/event/ScheduleEntitySpawner",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onWorldTickEvent(Lnet/minecraftforge/fml/common/gameevent/TickEvent$WorldTickEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/gui/config/ConfigGuiFactory": {
+    "name": "mods/flammpfeil/slashblade/gui/config/ConfigGuiFactory",
+    "interfaces": [
+      "net/minecraftforge/fml/client/IModGuiFactory"
+    ]
+  },
+  "mods/flammpfeil/slashblade/item/ItemProudSoul$EnumSoulType": {
+    "name": "mods/flammpfeil/slashblade/item/ItemProudSoul$EnumSoulType",
+    "interfaces": [
+      "net/minecraft/util/IStringSerializable"
+    ]
+  },
+  "mods/flammpfeil/slashblade/item/ItemProudSoul$EnumSoulType$1": {
+    "name": "mods/flammpfeil/slashblade/item/ItemProudSoul$EnumSoulType$1",
+    "interfaces": [
+      "java/util/function/Supplier"
+    ]
+  },
+  "mods/flammpfeil/slashblade/item/TossEventHandler": {
+    "name": "mods/flammpfeil/slashblade/item/TossEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "itemTossEvent(Lnet/minecraftforge/event/entity/item/ItemTossEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/Agito": {
+    "name": "mods/flammpfeil/slashblade/named/Agito",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postinit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/BambooMod": {
+    "name": "mods/flammpfeil/slashblade/named/BambooMod",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postinit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/BladeMaterials": {
+    "name": "mods/flammpfeil/slashblade/named/BladeMaterials",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/HIGHEST"
+          }
+        }
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/Doutanuki": {
+    "name": "mods/flammpfeil/slashblade/named/Doutanuki",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postinit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "specialSpawn(Lnet/minecraftforge/event/entity/living/LivingSpawnEvent$SpecialSpawn;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/Fox": {
+    "name": "mods/flammpfeil/slashblade/named/Fox",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postInit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/Koseki": {
+    "name": "mods/flammpfeil/slashblade/named/Koseki",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postinit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onBladeStandAttack(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$BladeStandAttack;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/NamedBladeManager": {
+    "name": "mods/flammpfeil/slashblade/named/NamedBladeManager",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRegisterSBAchievement(Lmods/flammpfeil/slashblade/util/SlashBladeAchievementCreateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/PSSange": {
+    "name": "mods/flammpfeil/slashblade/named/PSSange",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postinit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/PSYasha": {
+    "name": "mods/flammpfeil/slashblade/named/PSYasha",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postinit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/SimpleBlade": {
+    "name": "mods/flammpfeil/slashblade/named/SimpleBlade",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/HIGHEST"
+          }
+        }
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/Tagayasan": {
+    "name": "mods/flammpfeil/slashblade/named/Tagayasan",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/Tizuru": {
+    "name": "mods/flammpfeil/slashblade/named/Tizuru",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postinit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/Tukumo": {
+    "name": "mods/flammpfeil/slashblade/named/Tukumo",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/named/Yamato": {
+    "name": "mods/flammpfeil/slashblade/named/Yamato",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "postinit(Lmods/flammpfeil/slashblade/named/event/LoadEvent$PostInitEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/network/MessageMoveCommandState": {
+    "name": "mods/flammpfeil/slashblade/network/MessageMoveCommandState",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "mods/flammpfeil/slashblade/network/MessageMoveCommandStateHandler": {
+    "name": "mods/flammpfeil/slashblade/network/MessageMoveCommandStateHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "mods/flammpfeil/slashblade/network/MessageRangeAttack": {
+    "name": "mods/flammpfeil/slashblade/network/MessageRangeAttack",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "mods/flammpfeil/slashblade/network/MessageRangeAttackHandler": {
+    "name": "mods/flammpfeil/slashblade/network/MessageRangeAttackHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "mods/flammpfeil/slashblade/network/MessageRankpointSynchronize": {
+    "name": "mods/flammpfeil/slashblade/network/MessageRankpointSynchronize",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "mods/flammpfeil/slashblade/network/MessageRankpointSynchronizeHandler": {
+    "name": "mods/flammpfeil/slashblade/network/MessageRankpointSynchronizeHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "mods/flammpfeil/slashblade/network/MessageSpecialAction": {
+    "name": "mods/flammpfeil/slashblade/network/MessageSpecialAction",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "mods/flammpfeil/slashblade/network/MessageSpecialActionHandler": {
+    "name": "mods/flammpfeil/slashblade/network/MessageSpecialActionHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "mods/flammpfeil/slashblade/specialattack/SlashDimension": {
+    "name": "mods/flammpfeil/slashblade/specialattack/SlashDimension",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/specialattack/IJustSpecialAttack",
+      "mods/flammpfeil/slashblade/specialattack/ISuperSpecialAttack"
+    ]
+  },
+  "mods/flammpfeil/slashblade/specialattack/SlashDimensionSpiral": {
+    "name": "mods/flammpfeil/slashblade/specialattack/SlashDimensionSpiral",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/specialattack/IJustSpecialAttack",
+      "mods/flammpfeil/slashblade/specialattack/ISuperSpecialAttack"
+    ]
+  },
+  "mods/flammpfeil/slashblade/specialeffect/BlastEdge": {
+    "name": "mods/flammpfeil/slashblade/specialeffect/BlastEdge",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/specialeffect/ISpecialEffect",
+      "mods/flammpfeil/slashblade/specialeffect/IRemovable"
+    ],
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingUpdate(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLivingAttack(Lnet/minecraftforge/event/entity/living/LivingAttackEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onImpactEffectEvent(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$ImpactEffectEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdateItemSlashBlade(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "LivingDrops(Lnet/minecraftforge/event/entity/living/LivingDropsEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/specialeffect/CrystalHealing": {
+    "name": "mods/flammpfeil/slashblade/specialeffect/CrystalHealing",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/specialeffect/ISpecialEffect"
+    ],
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdate(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/specialeffect/HFCustom": {
+    "name": "mods/flammpfeil/slashblade/specialeffect/HFCustom",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/specialeffect/ISpecialEffect",
+      "mods/flammpfeil/slashblade/specialeffect/IRemovable"
+    ],
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onImpactEffectEvent(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$ImpactEffectEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdateItemSlashBlade(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/specialeffect/Limitter": {
+    "name": "mods/flammpfeil/slashblade/specialeffect/Limitter",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/specialeffect/ISpecialEffect"
+    ],
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdate(Lnet/minecraftforge/event/entity/living/LivingEvent$LivingUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/specialeffect/WitherEdge": {
+    "name": "mods/flammpfeil/slashblade/specialeffect/WitherEdge",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/specialeffect/ISpecialEffect",
+      "mods/flammpfeil/slashblade/specialeffect/IRemovable"
+    ],
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onImpactEffectEvent(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$ImpactEffectEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUpdateItemSlashBlade(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/util/DummyRecipeBase": {
+    "name": "mods/flammpfeil/slashblade/util/DummyRecipeBase",
+    "interfaces": [
+      "net/minecraft/item/crafting/IRecipe"
+    ]
+  },
+  "mods/flammpfeil/slashblade/util/KeyBindingEx": {
+    "name": "mods/flammpfeil/slashblade/util/KeyBindingEx",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "ClientTickEvent(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/util/SlashBladeEvent$BladeStandAttack": {
+    "name": "mods/flammpfeil/slashblade/util/SlashBladeEvent$BladeStandAttack",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/Cancelable;",
+        "target": "mods/flammpfeil/slashblade/util/SlashBladeEvent$BladeStandAttack"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/util/SlashBladeEvent$ImpactEffectEvent": {
+    "name": "mods/flammpfeil/slashblade/util/SlashBladeEvent$ImpactEffectEvent",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/Cancelable;",
+        "target": "mods/flammpfeil/slashblade/util/SlashBladeEvent$ImpactEffectEvent"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/util/SlashBladeEvent$OnEntityBladeStandUpdateEvent": {
+    "name": "mods/flammpfeil/slashblade/util/SlashBladeEvent$OnEntityBladeStandUpdateEvent",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/Cancelable;",
+        "target": "mods/flammpfeil/slashblade/util/SlashBladeEvent$OnEntityBladeStandUpdateEvent"
+      }
+    ]
+  },
+  "mods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent": {
+    "name": "mods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/Cancelable;",
+        "target": "mods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/NegoreRouse": {
+    "name": "moflop/mods/negorerouse/NegoreRouse",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "moflop/mods/negorerouse/NegoreRouse",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "dependencies": {
+            "value": "required-after:flammpfeil.slashblade@[mc1.12-r30,);"
+          },
+          "modid": {
+            "value": "negorerouse"
+          },
+          "name": {
+            "value": "NegroeRouse"
+          },
+          "version": {
+            "value": "r1"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$Instance;",
+        "target": "instance",
+        "value": {
+          "value": "negorerouse"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/SidedProxy;",
+        "target": "proxy",
+        "values": {
+          "clientSide": {
+            "value": "moflop.mods.negorerouse.client.ClientProxy"
+          },
+          "serverSide": {
+            "value": "moflop.mods.negorerouse.common.CommonProxy"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/item/event/SoulDropsEvent": {
+    "name": "moflop/mods/negorerouse/item/event/SoulDropsEvent",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPassiveDrop(Lnet/minecraftforge/event/entity/living/LivingDropsEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/named/Artemis": {
+    "name": "moflop/mods/negorerouse/named/Artemis",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/named/Chronos": {
+    "name": "moflop/mods/negorerouse/named/Chronos",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/named/ChronosN": {
+    "name": "moflop/mods/negorerouse/named/ChronosN",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/named/Erebus": {
+    "name": "moflop/mods/negorerouse/named/Erebus",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/named/Hercules": {
+    "name": "moflop/mods/negorerouse/named/Hercules",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/named/Nier": {
+    "name": "moflop/mods/negorerouse/named/Nier",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/named/Protogenoi": {
+    "name": "moflop/mods/negorerouse/named/Protogenoi",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "init(Lmods/flammpfeil/slashblade/named/event/LoadEvent$InitEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/specialeffects/NrSpecialEffects": {
+    "name": "moflop/mods/negorerouse/specialeffects/NrSpecialEffects",
+    "interfaces": [
+      "mods/flammpfeil/slashblade/specialeffect/ISpecialEffect",
+      "mods/flammpfeil/slashblade/specialeffect/IRemovable"
+    ]
+  },
+  "moflop/mods/negorerouse/specialeffects/event/NrSEEvent": {
+    "name": "moflop/mods/negorerouse/specialeffects/event/NrSEEvent",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "oracleUpdate(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "burstDriveUpdate(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "reversePowerUpdate(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "absolutePowerUpdate(Lmods/flammpfeil/slashblade/util/SlashBladeEvent$OnUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "back(Lnet/minecraftforge/event/entity/living/LivingDeathEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/negorerouse/utils/ItemUtils": {
+    "name": "moflop/mods/negorerouse/utils/ItemUtils",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onModelBake(Lnet/minecraftforge/client/event/ModelBakeEvent;)V"
+      }
+    ]
+  },
+  "moflop/mods/test/Test": {
+    "name": "moflop/mods/test/Test",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "moflop/mods/test/Test",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "dependencies": {
+            "value": "required-after:flammpfeil.slashblade;"
+          },
+          "modid": {
+            "value": "test"
+          },
+          "name": {
+            "value": "TestMod"
+          },
+          "version": {
+            "value": "0.0.1"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/SidedProxy;",
+        "target": "proxy",
+        "values": {
+          "clientSide": {
+            "value": "moflop.mods.util.client.ClientProxy"
+          },
+          "modId": {
+            "value": "test"
+          },
+          "serverSide": {
+            "value": "moflop.mods.util.client.CommonProxy"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$InstanceFactory;",
+        "target": "getInstance()Lmoflop/mods/test/Test;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preLoad(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "load(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "postLoad(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      }
+    ]
+  }
+}
